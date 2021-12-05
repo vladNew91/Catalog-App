@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+}
+
+:root {
+    --header-bg: #badaed;
+}
+
+.header {
+    background-color: var(--header-bg);
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.headerArticle {
+    display: flex;
+    align-items: center;
+}
+
+.headerInput {
+    width: 50%;
+    font-size: 1.5em;
+    margin: 0 20px;
+}
+
+.headerUser {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content {
+    width: 90%;
+    margin: 2% auto;
+}
+
+.contentItems {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 40px;
+    font-size: 15px;
+    height: 100px;
+    justify-content: space-between;
+    color: #383636;
+}
+
+.pagination {
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.poster {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+}
+
+.pageBtn {
+    cursor: pointer;
+}
