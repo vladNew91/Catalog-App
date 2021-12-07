@@ -10,7 +10,7 @@ interface ContentComponentProps {
 export const ContentComponent: React.FC<ContentComponentProps> = React.memo((props: ContentComponentProps): JSX.Element => {
     return (
         <div className={styles.contentItems}>
-            {!props.api ? (
+            {!props.api?.Search ? (
                 <span>Loading...</span>
             ) : (
                 props.api.Search.slice(0, 8).map((movie: Movie, i: number) => (
