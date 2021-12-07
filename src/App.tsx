@@ -25,9 +25,9 @@ export const App: React.FC = (): JSX.Element => {
             />
 
             <section className={styles.content}>
-                <SearchComponent search={search} api={api} />
+                <SearchComponent search={search} totalResults={api?.totalResults} />
                 <ContentComponent api={api} />
-                <PaginationComponent api={api} setPage={setPage} />
+                <PaginationComponent totalResults={api?.totalResults} setPage={setPage} />
             </section>
         </>
     );

@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from '../../styles/index.module.css';
-import { MoviesApi } from '../../types';
 
 interface PaginationComponentProps {
-    api?: MoviesApi;
+    totalResults?: number;
     setPage: (page: number) => void;
 }
 
@@ -12,9 +11,9 @@ export const PaginationComponent: React.FC<PaginationComponentProps> = React.mem
 ): JSX.Element => {
     let pages = 1;
 
-    if (props.api?.totalResults) {
+    if (props.totalResults) {
         const maxPages = 10;
-        const totalPages = props.api?.totalResults / maxPages;
+        const totalPages = props.totalResults / maxPages;
 
         if (totalPages > maxPages) {
             pages = maxPages;

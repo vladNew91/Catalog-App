@@ -13,7 +13,7 @@ export const ContentComponent: React.FC<ContentComponentProps> = React.memo((pro
             {!props.api ? (
                 <span>Loading...</span>
             ) : (
-                props.api.Search?.slice(0, 8).map((movie: Movie, i: number) => (
+                props.api.Search.slice(0, 8).map((movie: Movie, i: number) => (
                     <CatalogCardComponent
                         icon={movie.Poster}
                         name={movie.Title}
